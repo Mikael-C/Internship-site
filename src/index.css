@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme inline {
+  /* Primary Colors */
+  --color-primary: #1560BD;
+  --color-primary-dark: #0E407D;
+  --color-primary-light: #4A93EB;
+  
+  /* Accent Colors */
+  --color-accent: #FF8200;
+  --color-accent-dark: #D56E00;
+  --color-accent-light: #FFA235;
+  
+  /* Secondary Colors */
+  --color-secondary: #3E8EDE;
+  --color-secondary-dark: #2377CB;
+  --color-secondary-light: #7FB4E9;
+  
+  /* Neutral Colors */
+  --color-dark: #1E293B;
+  --color-gray-dark: #475569;
+  --color-gray: #64748B;
+  --color-gray-light: #CBD5E1;
+  --color-light: #F8FAFC;
+  
+  /* Font Families */
+  --font-sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-dark);
+    line-height: 1.6;
+    background-color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-dark);
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3.5 bg-(--color-accent) text-white rounded-lg font-semibold hover:bg-(--color-accent-dark) transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3.5 border-2 border-(--color-primary) text-(--color-primary) rounded-lg font-semibold hover:bg-(--color-primary) hover:text-white transition-all duration-200;
+  }
+
+  .btn-outline {
+    @apply px-8 py-3.5 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-(--color-dark) transition-all duration-200;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
