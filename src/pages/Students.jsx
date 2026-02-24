@@ -129,8 +129,52 @@ const Students = () => {
         </div>
       </section>
 
-      {/* Solution Section */}
-      <section className="section-padding">
+      {/* How It Works */}
+      <section id="how-it-works" className="section-padding">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              How it works
+            </h2>
+            <p className="text-xl text-(--color-gray) max-w-3xl mx-auto">
+              A clear path from application to real-world experience, designed around your schedule.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              {
+                step: '01',
+                title: 'Apply in minutes',
+                body: 'Tell us about your interests, goals, and availability—no prior experience required.',
+              },
+              {
+                step: '02',
+                title: 'Get matched',
+                body: 'We connect you with remote internships that align with your field and ambitions.',
+              },
+              {
+                step: '03',
+                title: 'Gain experience',
+                body: 'Work on real projects with support from coaches and mentors throughout your journey.',
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="bg-white rounded-3xl border border-(--color-light) shadow-sm p-6 text-left"
+              >
+                <p className="text-sm font-semibold text-(--color-primary) mb-2">
+                  Step {item.step}
+                </p>
+                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-(--color-gray-dark)">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solution / Benefits Section */}
+      <section id="benefits" className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -158,7 +202,7 @@ const Students = () => {
       />
 
       {/* Testimonials */}
-      <section className="section-padding">
+      <section id="testimonials" className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -172,6 +216,110 @@ const Students = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard key={index} {...testimonial} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Career Fields */}
+      <section id="career-fields" className="bg-(--color-light) section-padding">
+        <div className="container-custom">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">
+              Explore career fields
+            </h2>
+            <p className="text-lg text-(--color-gray-dark) max-w-3xl mx-auto">
+              Discover opportunities across business, technology, creative industries, and more.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              'Business, Finance & Consulting',
+              'Technology, Data & Product',
+              'Marketing, Communications & Design',
+              'People, HR & Operations',
+              'Policy, Non-profit & Impact',
+              'And many more...',
+            ].map((field) => (
+              <div
+                key={field}
+                className="bg-white rounded-3xl border border-(--color-light) p-5 text-sm text-(--color-gray-dark)"
+              >
+                {field}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experiences */}
+      <section id="experiences" className="section-padding">
+        <div className="container-custom grid gap-10 lg:grid-cols-[2fr,2.2fr] items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Built around your life, not the other way around
+            </h2>
+            <p className="text-lg text-(--color-gray-dark) mb-4">
+              Choose from part-time or full-time internships, summer programs, or shorter sprints that fit
+              alongside your studies, work, or other commitments.
+            </p>
+            <p className="text-sm text-(--color-gray-dark)">
+              Every experience includes structured support, feedback, and reflection so you can translate your
+              work into stories that stand out on applications and interviews.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-3xl bg-(--color-light) p-5 text-sm text-(--color-gray-dark)">
+              <p className="font-semibold mb-1">4–12 week programs</p>
+              <p>Flexible start dates with options for 10–30 hours per week.</p>
+            </div>
+            <div className="rounded-3xl bg-(--color-light) p-5 text-sm text-(--color-gray-dark)">
+              <p className="font-semibold mb-1">Project-based sprints</p>
+              <p>Shorter, intensive experiences to build portfolio-ready work.</p>
+            </div>
+            <div className="rounded-3xl bg-(--color-light) p-5 text-sm text-(--color-gray-dark)">
+              <p className="font-semibold mb-1">Year-round intakes</p>
+              <p>Apply at any time of year—no need to wait for summer.</p>
+            </div>
+            <div className="rounded-3xl bg-(--color-light) p-5 text-sm text-(--color-gray-dark)">
+              <p className="font-semibold mb-1">Coaching built-in</p>
+              <p>Career coaching and skills support alongside your internship.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section id="faqs" className="bg-(--color-light) section-padding">
+        <div className="container-custom">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Frequently asked questions</h2>
+            <p className="text-lg text-(--color-gray-dark) max-w-3xl mx-auto">
+              Answers to common questions about eligibility, time commitment, and outcomes.
+            </p>
+          </div>
+          <div className="space-y-4">
+            {[
+              {
+                q: 'Do I need previous work experience to apply?',
+                a: 'No. Our programs are designed for students and career changers at different stages. We focus on your motivation, interests, and potential.',
+              },
+              {
+                q: 'How many hours per week do I need to commit?',
+                a: 'Most programs range from 10–30 hours per week. During matching, we work with you to find opportunities that fit your schedule.',
+              },
+              {
+                q: 'Can I get academic credit?',
+                a: 'Many of our university partners offer credit-bearing options. We can provide documentation and support where required.',
+              },
+            ].map((item) => (
+              <div
+                key={item.q}
+                className="bg-white rounded-3xl border border-(--color-light) p-5 text-left"
+              >
+                <p className="font-semibold mb-2">{item.q}</p>
+                <p className="text-sm text-(--color-gray-dark)">{item.a}</p>
+              </div>
             ))}
           </div>
         </div>

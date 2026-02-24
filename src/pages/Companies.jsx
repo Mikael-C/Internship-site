@@ -122,6 +122,50 @@ const Companies = () => {
         </div>
       </section>
 
+      {/* How It Works */}
+      <section id="how-it-works" className="section-padding">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              How GlobalPaths works for companies
+            </h2>
+            <p className="text-xl text-(--color-gray) max-w-3xl mx-auto">
+              A simple, guided process from sharing your needs to welcoming your first remote interns.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              {
+                step: '01',
+                title: 'Share your goals',
+                body: 'Tell us about your team, projects, and the skills you&apos;re looking for in an intern.',
+              },
+              {
+                step: '02',
+                title: 'Match with talent',
+                body: 'We surface pre-screened, motivated candidates and help you select the best fit.',
+              },
+              {
+                step: '03',
+                title: 'Launch and support',
+                body: 'We support onboarding, check-ins, and program quality so your interns can focus on impact.',
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="bg-white rounded-3xl border border-(--color-light) shadow-sm p-6 text-left"
+              >
+                <p className="text-sm font-semibold text-(--color-primary) mb-2">
+                  Step {item.step}
+                </p>
+                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-(--color-gray-dark)">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="section-padding">
         <div className="container-custom">
@@ -150,8 +194,8 @@ const Companies = () => {
         bgColor="bg-(--color-light)"
       />
 
-      {/* Testimonials */}
-      <section className="section-padding">
+      {/* Testimonials / Success Stories */}
+      <section id="success-stories" className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">

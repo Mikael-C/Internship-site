@@ -159,6 +159,32 @@ const Educators = () => {
         </div>
       </section>
 
+      {/* Segments: Bootcamps, Governments, Affiliates */}
+      <section className="bg-(--color-light) section-padding">
+        <div className="container-custom grid gap-8 md:grid-cols-3">
+          <div id="bootcamps" className="bg-white rounded-3xl border border-(--color-light) p-6">
+            <h3 className="text-lg font-semibold mb-2">For bootcamps</h3>
+            <p className="text-sm text-(--color-gray-dark)">
+              Integrate remote, project-based experiences that help learners showcase real portfolios to employers
+              and hiring partners.
+            </p>
+          </div>
+          <div id="governments" className="bg-white rounded-3xl border border-(--color-light) p-6">
+            <h3 className="text-lg font-semibold mb-2">For governments</h3>
+            <p className="text-sm text-(--color-gray-dark)">
+              Scale national or regional work experience initiatives with a single platform built for quality and
+              reporting.
+            </p>
+          </div>
+          <div id="affiliates" className="bg-white rounded-3xl border border-(--color-light) p-6">
+            <h3 className="text-lg font-semibold mb-2">For affiliates</h3>
+            <p className="text-sm text-(--color-gray-dark)">
+              Partner with us to extend GlobalPaths programs to your learners, members, or alumni communities.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <StatsSection 
         stats={stats}

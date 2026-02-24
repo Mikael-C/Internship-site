@@ -95,9 +95,9 @@ const Header = () => {
                 <ChevronDown size={16} />
               </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                <a href="#blog" className="block px-4 py-3 hover:bg-(--color-light) transition-colors">
+                <Link to="/blog" className="block px-4 py-3 hover:bg-(--color-light) transition-colors">
                   Blog
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -230,9 +230,9 @@ const Header = () => {
               </button>
               {openDropdown === 'resources' && (
                 <div className="pl-4 space-y-2 mt-2">
-                  <a href="#blog" className="block py-2 text-(--color-gray)">
+                  <Link to="/blog" className="block py-2 text-(--color-gray)">
                     Blog
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>

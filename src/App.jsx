@@ -5,6 +5,13 @@ import Home from './pages/Home';
 import Companies from './pages/Companies';
 import Students from './pages/Students';
 import Educators from './pages/Educators';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Careers from './pages/Careers';
+import Blog from './pages/Blog';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Cookies from './pages/Cookies';
 import Welcome from './pages/auth/Welcome';
 import ChoosePath from './pages/auth/ChoosePath';
 import GetStarted from './pages/auth/GetStarted';
@@ -28,6 +35,13 @@ function App() {
           <Route path="/companies" element={<Companies />} />
           <Route path="/students" element={<Students />} />
           <Route path="/educators" element={<Educators />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/cookies" element={<Cookies />} />
           
           {/* Auth Routes */}
           <Route path="/auth/welcome" element={<Welcome />} />
