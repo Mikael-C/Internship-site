@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Companies from './pages/Companies';
 import Students from './pages/Students';
-import Educators from './pages/Educators';
+import Educators from './pages/Educators'; 
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Careers from './pages/Careers';
